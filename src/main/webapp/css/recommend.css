@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+		/* 제목 스타일 */
+		.recommend-title{
+			font-size: 2vh;
+			background-color: #57c6e1;
+           	color: white;
+           	padding: 0.5vh 1vh;
+           	margin: 0vh;
+           	margin-left: 15vh;
+           	 border-top-left-radius: 1.389vh; /* 둥근 모서리 */
+           	 border-top-right-radius: 1.389vh; /* 둥근 모서리 */
+		}
+		
+        /* 전체 컨테이너 스타일 */
+        .book-container {
+			border: 0.7vh solid #57c6e1;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* 여러 줄로 가로 정렬 */
+            gap: 10vh; /* 항목 간격 */
+            margin-bottom: 5vh;
+            margin-left: 15vh;
+            margin-right: 15vh;
+            padding: 6vh 2vh;
+            border-bottom-left-radius: 1.389vh;
+            border-bottom-right-radius: 1.389vh;
+            border-top-right-radius: 1.389vh; /* 둥근 모서리 */
+            box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+        }
+
+        /* 각 도서 항목 스타일 */
+        .book-item {
+			display: flex;
+            justify-content: center;
+            text-align: center;
+            width: 20vh; /* 항목 너비 */
+            padding: 3vh 10vh;
+        }
+
+        /* 이미지 스타일 */
+        .book-item img {
+            width: auto;
+            height: 18.519vh;
+            border-radius: 5px; /* 둥근 모서리 */
+            margin-bottom: 2vh;
+            box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+        }
+        
+        .book-item span {
+			font-size: 2vh;
+			color: black;
+        }

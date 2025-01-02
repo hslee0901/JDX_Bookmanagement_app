@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* 도서 표지 이미지 스타일 */
+.book-image {
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: flex-start; /* 세로 상단 정렬 */
+    height: 100%; /* 컨테이너 높이 확장 */
+    text-align: center; /* 텍스트가 있을 경우 중앙 정렬 */
+}
+
+.book-image img {
+    width: 13.889vh;
+    height: auto; /* 이미지 비율 유지 */
+    display: block; /* 이미지 블록 요소로 설정 */
+}
+
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+		
+			.book-info,
+		    .book-description {
+		        font-size: 0.9rem; /* 모바일 화면에서 폰트 크기 줄이기 */
+		    }
+		    
+		    /* 작은 화면에서 책 정보를 한 줄씩 배치 */
+		    .book-image,
+		    .book-info,
+		    .book-description {
+		        width: 100%; /* 모든 요소를 100%로 설정하여 한 줄씩 배치 */
+		        text-align: center; /* 가운데 정렬 */
+		    }
+		    
+		    .text-primary {
+		        font-size: 1.5rem;  /* 작은 화면에서 폰트 크기 줄이기 */
+		    }
+			
+		    
+			.book-image {
+			    margin-bottom: 5vh;
+			}
+	
+			.book-image img {
+			    width: 30vh;
+			}
+			
+            .row {
+                flex-direction: column; /* 세로 정렬 */
+                text-align: center; /* 텍스트와 이미지를 중앙 정렬 */
+            }
+            .col-md-4 img {
+                margin: 0 auto; /* 이미지 중앙 배치 */
+            }
+            .col-md-8 {
+                text-align: center; /* 도서 정보 중앙 정렬 */
+            }
+        }
+        @media (min-width: 769px) {
+            .col-md-8 {
+                text-align: left; /* 큰 화면에서는 왼쪽 정렬 */
+            }
+        }

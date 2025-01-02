@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/* styles/search.css */
+body {
+	font-family: "Gamja Flower", sans-serif;
+	margin: 0;
+	padding: 0;
+ 
+}
+
+.index-logo img {
+	height: 50px;
+}
+
+.index-logo h1 {
+	margin-left: 10px;
+}
+
+.head-button button {
+	margin: 0 5px;
+}
+
+form {
+	margin: 20px auto;
+	text-align: center;
+	max-width: 600px;
+}
+
+form input[type="text"] {
+	width: 70%;
+	padding: 10px;
+	margin-right: 5px;
+}
+
+form button {
+	padding: 10px 20px;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.search-result {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	transition: background-color 0.3s ease;
+}
+
+.search-result:hover {
+	background-color: #f8f9fa;
+}
+
+.search-result .container {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.search-result img {
+	width: 80px;
+	height: auto;
+	object-fit: cover;
+	margin-right: 15px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.pagination-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.page-item {
+	margin: 0 5px;
+}
+
+.page-link {
+	padding: 10px 20px;
+	background-color: #352d5f;
+	color: white;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+	background-color: #b6ffa1;
+}
+
+.heart-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.heart-icon::before, .heart-icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+}
+
+.heart-icon::before {
+    left: 0;
+}
+
+.heart-icon::after {
+    left: 10px;
+    transform: rotate(45deg);
+}
+
+/* 하트가 채워진 상태 */
+.favorite-btn.favorited .heart-icon {
+    background-color: red;
+}

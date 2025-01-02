@@ -1,0 +1,171 @@
+/* 전체 페이지 스타일 */
+body {
+	  font-family: "Gamja Flower", sans-serif;
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 레이아웃 */
+    height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+    
+}
+
+/* 헤더 스타일 */
+header {
+    height: 100px; 
+    flex-shrink: 0; /* 헤더는 고정 크기 유지 */
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; /* 패딩 추가 */
+    width: 100%; 
+     font-family: "Gamja Flower", sans-serif;
+}
+main {
+	flex: 1; /* 메인 콘텐츠는 남은 공간을 차지 */
+	padding-top: 100px; 
+	/* 헤더 위로 올라가는 기능을 추가했기 때문에 이 설정을 안할 경우 상위 메인이 헤더 부분이랑 겹쳐서 위 내용이 안보이기 때문에 헤더 크기마냥 100px 패딩상단 추가*/
+	 font-family: "Gamja Flower", sans-serif;
+}	
+
+.index-logo {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.index-logo h1 {
+    color: white;
+    font-size: 50px;
+    margin-left: 10px;
+    line-height: normal;
+}
+
+.index-logo img {
+    height: 70px !important;
+    width: auto !important;
+}
+.header-i{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 36px;
+	background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); /* 그라데이션 배경 */
+    -webkit-background-clip: text; /* 텍스트에 배경 클립 적용 */
+    -webkit-text-fill-color: transparent; /* 텍스트 색상 투명 설정 */
+    display: inline-block; /* 인라인 블록으로 설정하여 배경 적용 가능 */	
+}
+
+.header-i:hover {
+	opacity: 0.7; /* 호버 시 투명도 조절 */
+}
+
+
+/* 로그인 컨테이너 스타일 */
+.login-container {
+    width: 400px; /*경고 창에 길이에 맞게 길이 증가 수정 패치1-------------------------------------*/
+
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    margin: auto; /* 중앙 정렬 */
+    margin-top: 100px; /* 헤더 높이만큼 여백 추가 */
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margine: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #45a049;
+}
+
+/* 회원가입  수정패치1-------------------------------------------------------*/
+.signup-btn {
+	margin-top: 10px;
+}
+
+/* 푸터 스타일 */
+footer {
+	height: 80px; flex-shrink : 0; /* 푸터는 고정 크기 유지 */
+	background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+	color: white;
+	width: 100%;
+	flex-shrink: 0; /* 푸터 텍스트 색상 조정 */
+}
+
+footer p {
+	margin: 1.2px;
+}
+
+.foot-i-school {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer i {
+	margin: 5px;
+}
+
+.foot-i-circle { /* 푸터 아이콘 설정  */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	margin-bottom: 1.5px;
+}
+
+/* 모달 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+}
+.modal-content h3 {
+    margin: 0;
+    color: #333;
+}
+.modal-content button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}

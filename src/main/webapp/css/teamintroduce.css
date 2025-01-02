@@ -1,0 +1,228 @@
+/* 공통 스타일 */
+body {
+	  font-family: "Gamja Flower", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+	overflow: hidden;
+}
+
+.name, .Team_name, .derive_from, .player_name, .hitokoto {
+	    font-family: "Kaisei Opti", serif; 
+	user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.name {
+    color: #333;
+    text-align: center;
+}
+
+.Team_name {
+    margin-top: .75em;
+    font-size: 2.2em;
+    color: #0066cc;
+    font-weight: bold;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 0.5rem;
+}
+
+.derive_from {
+    font-size: 1.5em;
+    color: #4a90e2;
+    font-weight: 700;
+    margin-top: 1em;
+    text-transform: uppercase; /* 대문자로 변환 */
+}
+
+.answer {
+    margin: 0.75em auto;
+    font-size: 1.2em;
+    color: #555;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    background: #f0f8ff;
+    max-width: 67vw;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .Team_name {
+        font-size: 1.8em;
+    }
+
+    .derive_from {
+        font-size: 1.2em;
+    }
+
+    .answer {
+        font-size: 1em;
+        padding: 0.75rem;
+    }
+}
+
+.players {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20em;
+    margin-right: 20em;
+    margin-top: 3em;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.players.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.players.right-hidden {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.players.left-hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.player {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 16vw;
+    height: 48vh;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    max-height: 32vh;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+.player_name {
+	margin-top: 0.5vw;
+	margin-bottom: 0.5vw;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+.info {
+    position: relative; /* 기본적으로 독립적인 레이어로 설정 */
+    z-index: 10; /* 다른 요소 위에 위치 */
+}
+
+.sns {
+    text-decoration: none;
+    width: 2.25vw;
+    height: 2.25vw;
+}
+
+.hitokoto {
+	justify-content: center;
+	flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    font-size: 1.2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
+    color: #ffffff;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 5; /* info보다 뒤로 */
+}
+.player:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.player:hover .hitokoto {
+    opacity: 1;
+    visibility: visible;
+}
+
+.player:hover .photo {
+    opacity: 0.2;
+}
+
+.player:hover .info {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.hitokoto .label {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.arrow-btn {
+	top: 60%;
+	position: absolute;
+	font-size: 18px;
+	padding: 10px 20px;
+	border-radius: 50px;
+	border: 2px solid #007bff;
+	background-color: transparent;
+	color: #007bff;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-left {
+	left: 5%;
+}
+
+.btn-right {
+	right: 5%;
+}
+
+.arrow-btn:hover {
+	background-color: #007bff;
+	color: white;
+}
+
+.arrow-btn:focus {
+	outline: none;
+}
+

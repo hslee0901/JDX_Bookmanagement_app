@@ -1,0 +1,89 @@
+/* 스타일 공통 설정 */
+body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-y:auto;
+    background-color: #f9f9f9;
+   font-family: "Gamja Flower", sans-serif;
+}
+
+
+main h1{
+	justify-content: center;
+	align-items: center;
+	margin: 5vh;
+}
+
+/* 리스트 아이템 스타일 */
+.book-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    gap: 20px;
+}
+
+/* 썸네일 스타일 */
+.book-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    left:0;
+}
+
+/* 책 제목 스타일 */
+.book-title {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 책 정보 스타일 */
+.book-info {
+	display: flex;
+	flex-direction: column;
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+}
+
+.book-detail{
+	display: flex;
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+}
+
+/* 삭제 버튼 스타일 */
+.delete-form {
+    margin-top: 15px;
+}
+
+.delete-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff5c5c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #e04747;
+}

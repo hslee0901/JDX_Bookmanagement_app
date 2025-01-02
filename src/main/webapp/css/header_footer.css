@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+main {
+	flex: 1; /* 메인 콘텐츠는 남은 공간을 차지 */
+	padding-top: 100px; 
+	/* 헤더 위로 올라가는 기능을 추가했기 때문에 이 설정을 안할 경우 상위 메인이 헤더 부분이랑 겹쳐서 위 내용이 안보이기 때문에 헤더 크기마냥 100px 패딩상단 추가*/
+}
+
+body {
+	  font-family: "Gamja Flower", sans-serif;
+	display: flex;
+	flex-direction: column;
+	height: 100vh; /* 전체 화면 높이 */
+	margin: 0; /* 기본 마진 제거 */	
+}
+
+/* 헤더 시작 */
+header {
+    height: 100px; 
+    flex-shrink: 0; /* 헤더는 고정 크기 유지 */
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; /* 패딩 추가 */
+    position: fixed; 
+    top: 0; /* 초기 위치 설정 */
+    left: 0; /* 왼쪽에 고정 */
+    width: 100%; 
+    transition: top 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+header.show {
+    top: 0; /* 보일 때의 위치 */
+}
+
+header:not(.show) {
+    top: -100px; /* 헤더 높이만큼 숨김 */
+}
+
+
+header 
+
+.index-logo {
+	margin-left: 30px;
+	display: flex;
+	align-items: center;
+}
+
+.index-logo h1 {
+	color: white;
+	font-size: 50px;
+	margin-left: 10px;
+	line-height: normal;
+	
+}
+
+.index-logo img {
+	height: 70px !important;
+	width: auto !important;
+}
+
+.head-button {
+	display: flex; /* 버튼을 수평으로 배열 */
+	gap: 10px; /* 버튼 간의 간격 */
+}
+
+.header-i{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 36px;	
+	background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); /* 그라데이션 배경 */
+    -webkit-background-clip: text; /* 텍스트에 배경 클립 적용 */
+    -webkit-text-fill-color: transparent; /* 텍스트 색상 투명 설정 */
+    display: inline-block; /* 인라인 블록으로 설정하여 배경 적용 가능 */
+}
+
+.header-i:hover {
+	opacity: 0.7; /* 호버 시 투명도 조절 */
+}
+
+.btn:hover {
+	opacity: 0.7; /* 호버 시 투명도 조절 */
+}
+
+/* 화면 작아질 때 그나마 이쁘게하는 작업 시작  */
+@media (max-width: 995px) {
+    .head-button > button {
+        display: none; /* 화면이 작아지면 버튼 숨기기 */
+    }
+    
+    .dropdown {
+        display: none; /* 기본적으로 숨김 */
+    }
+    
+    .dropdown.show {
+        display: block; /* show 클래스가 있을 때 보이도록 */
+    }
+}
+/* 화면 작아질 때 그나마 이쁘게 정리하는 작업 끝 */
+
+
+/* 햄버거 디자인 드롭다운 */
+nav {
+	display: flex;
+	position: relative; /* 드롭다운 위치 조정을 위해 추가 */
+	align-items: center;
+}
+
+.menu {
+	position: relative; /* 드롭다운 위치 조정을 위해 추가 */
+}
+
+.burger {
+	cursor: pointer; /* 클릭 가능하게 */
+}
+
+.burger div {
+	width: 34px;
+	height: 5px;
+	background-color: #fff278;
+	margin: 5px;
+	margin-left: 10px;
+	transition: all 0.4s ease;
+}
+
+.toggle .line1 {
+	transform: rotate(-405deg) translate(-6px, 6px);
+}
+
+.toggle .line2 {
+	opacity: 0;
+}
+
+.toggle .line3 {
+	transform: rotate(405deg) translate(-6px, -6px);
+}
+    
+.dropdown {
+	
+	display: none; /* 기본적으로 숨김 */
+	position: absolute; /* 드롭다운 위치 조정을 위해 추가 */
+	background-color: white; /* 드롭다운 배경색 */
+	border: 2px solid #352d5f; /* 드롭다운 테두리 */
+	z-index: 1; /* 드롭다운이 다른 요소 위에 보이도록 */
+	margin: 2px;
+}
+
+.dropdown.show {
+	display: block; /* show 클래스가 있을 때 보이도록 */
+}
+
+.dropdown-item {
+	padding: 10px; /* 패딩 추가 */
+	text-decoration: none; /* 기본 밑줄 제거 */
+	color: black; /* 글자 색상 */
+	display: block; /* 블록으로 설정하여 전체 영역 클릭 가능 */
+	border: 2px solid #352d5f; /* 항목 구분을 위한 선 추가 */
+}
+
+.dropdown-item:last-child {
+	border-bottom: none; /* 마지막 항목에는 선을 제거 */
+}
+
+.dropdown-item:hover {
+	background-color: #f0f0f0; /* 호버 시 배경색 변경 */
+}
+/* 햄버거 디자인 드롭다운 끝 */
+
+/* 헤더 끝 */
+
+
+
+/* 푸터 시작 */
+footer {
+	height: 80px; flex-shrink : 0; /* 푸터는 고정 크기 유지 */
+	background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+	color: white;
+	width: 100%;
+	flex-shrink: 0; /* 푸터 텍스트 색상 조정 */
+}
+
+footer p {
+	margin: 1.2px;
+}
+
+.foot-i-school {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer i {
+	margin: 5px;
+}
+
+.foot-i-circle { /* 푸터 아이콘 설정  */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	margin-bottom: 1.5px;
+}
+
+/* 푸터 끝 */
+
+
+/* 반응형 디자인 */
+
+/* 화면 작아질 때 그나마 이쁘게하는 작업 시작  */
+@media (max-width: 995px) {
+    .head-button > button {
+        display: none; /* 화면이 작아지면 버튼 숨기기 */
+    }
+    
+    .dropdown {
+        display: none; /* 기본적으로 숨김 */
+    }
+    
+    .dropdown.show {
+        display: block; /* show 클래스가 있을 때 보이도록 */
+    }
+}
+/* 화면 작아질 때 그나마 이쁘게 정리하는 작업 끝 */
+
+@media (max-width: 768px) {
+	/* 헤더 */
+	
+	header {
+    height: 9.259vh;
+	}
+	
+	.index-logo {
+		margin-left: 0px;
+		align-items: center;
+	}
+	
+	.index-logo h1 {
+		margin-left: 2vw;
+		font-size: 6.25vw;
+	}
+	
+	.index-logo img {
+		width: 8.75vh !important;
+		height: auto !important;
+	}
+	
+	.header-i{
+		font-size: 5vh;
+	}
+}
