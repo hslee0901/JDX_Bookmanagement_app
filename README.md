@@ -7,7 +7,7 @@ https://console.cloud.google.com/welcome?hl=ko&inv=1&invt=AblxHg&project=sincere
 
 This project was created by the JDX club at Pusan University of Foreign Studies.
 
-The project utilizes Maven, the Google Books API, and MySQL.
+The project utilizes Maven, the Google Books API, and MySQL, TOMCAT.
 
 The database table creation commands are commented out at the bottom of the DBconnection.java file in the function_jdxbook directory, so please refer to them when creating the schema.
 
@@ -27,7 +27,7 @@ Book Detail Page (API)
 
 이 프로젝트는 부산외국어대학교 JDX 동아리에서 만든 프로젝트입니다.
 
-이 프로젝트는 maven과 google books api, MySQL를 사용했습니다. 
+이 프로젝트는 maven과 google books api, MySQL, 톰캣서버를 사용했습니다. 
 
 db 테이블 생성 명령어는 function_jdxbook의 DBconnection.java 밑 부분에 주석처리로 되어있기 때문에 스키마를 만들때 참고해주세요
 
@@ -49,7 +49,7 @@ db 테이블 생성 명령어는 function_jdxbook의 DBconnection.java 밑 부�
 
 このプロジェクトは釜山外国語大学のJ-DXサークルが作ったプロジェクトです。
 
-MAVENとgoogle books api, MySQLを使いました。
+MAVENとgoogle books api, MySQL, TOMCATを使いました。
 
 DBのテーブルを作るコードは function_jdxbookのDBconnection.javaの下側にありますので、参考してください。
 
