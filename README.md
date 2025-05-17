@@ -1,5 +1,7 @@
 Read.me
 
+Notion: https://www.notion.so/1e7d49c45006819cad8dd7a993a55cb9
+
 https://console.cloud.google.com/welcome?hl=ko&inv=1&invt=AblxHg&project=sincere-cat-417804
 ↑키를 발급 받을 수있는 구글클라우드 ・ KEYをもらえるグーグルクラウド ・ You can obtain the google books api key.
 
